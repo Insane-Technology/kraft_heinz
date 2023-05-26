@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BF9F84E3-C562-68E8-B7DE-D3B7B91C81C2" name="TB_TIPO_ENERGIA">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:22:36 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_tipo_energia" id="02E4C806-C033-4BCB-72E6-45361271FA84">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:22:46 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_tipo" id="CAD4936E-816F-009D-93D0-D7FBA1C5377F">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:23:31 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="renovavel" id="66830D82-0CB2-8DE5-C12D-D0E97C89039A">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:24:54 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D19FB46A-9DDB-EAB8-021F-24B67ECBB04B" name="TB_TIPO_ENERGIA PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:23:02 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>02E4C806-C033-4BCB-72E6-45361271FA84</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

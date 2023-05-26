@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="820CC03A-7EFC-F4E1-E693-3015633AA4C6" name="TB_DESPERDICIO">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:17:15 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_desperdicio" id="DE62F30F-DB36-85D0-8460-48A3F619BCEE">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:19:21 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_produto" id="46712E0C-351D-5892-30C1-3CA5E5E6BBB3">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:20:22 UTC</createdTime>
+<generatorID>AD6B2B5B-6E15-DF83-4791-822EC73E740D</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<referedAttribute>C9D28A0B-3AC5-D0E3-9187-A9734FEFD0E5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_setor" id="CBACCEEF-3C1F-F850-905B-7FE5F8321DAD">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:19:10 UTC</createdTime>
+<generatorID>916C0742-5940-80F0-67CF-3CFE694D8C63</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<referedAttribute>89AEB462-C765-C2F8-7677-E64B501442FB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B353B6D0-5BF8-DA3B-3AF1-E498918BCD8C" name="TB_DESPERDICIO PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:19:42 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DE62F30F-DB36-85D0-8460-48A3F619BCEE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

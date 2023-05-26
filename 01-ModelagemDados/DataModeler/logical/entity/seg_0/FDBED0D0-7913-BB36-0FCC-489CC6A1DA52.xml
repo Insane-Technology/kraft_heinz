@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FDBED0D0-7913-BB36-0FCC-489CC6A1DA52" name="TB_ENERGIA">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:17:11 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_energia" id="4B9A905A-38E5-9161-4B8C-8C4058AE3A9B">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:26:22 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_tipo_energia" id="D834197D-1693-F67F-90CF-F3D206C152BB">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:23:10 UTC</createdTime>
+<generatorID>83AE0EB2-480F-04CD-1D43-22129EAFA9A1</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<referedAttribute>02E4C806-C033-4BCB-72E6-45361271FA84</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_setor" id="36B2E2DB-27BF-522F-BD83-74F7C4E28979">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:19:04 UTC</createdTime>
+<generatorID>3369B299-0B3E-4CF6-987F-7267C3469696</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<referedAttribute>89AEB462-C765-C2F8-7677-E64B501442FB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_consumo" id="DBBF6C1F-08C0-7D38-A2B2-ED1823A2B2E4">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:27:05 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="qtd_consumida" id="C8847197-C80A-3B50-1E09-63F3B7E1D05F">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:27:41 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ABB96195-D4DE-EA5F-AE5A-CFB10B77BB25" name="TB_ENERGIA PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:26:34 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4B9A905A-38E5-9161-4B8C-8C4058AE3A9B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
