@@ -28,7 +28,7 @@
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nm_tipo" id="CAD4936E-816F-009D-93D0-D7FBA1C5377F">
+<Attribute name="nm_tipo_energia" id="CAD4936E-816F-009D-93D0-D7FBA1C5377F">
 <createdBy>rennecastrucci</createdBy>
 <createdTime>2023-05-26 20:23:31 UTC</createdTime>
 <ownerDesignName>DataModeler</ownerDesignName>
@@ -56,14 +56,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="D19FB46A-9DDB-EAB8-021F-24B67ECBB04B" name="TB_TIPO_ENERGIA PK">
+<identifier id="D19FB46A-9DDB-EAB8-021F-24B67ECBB04B" name="TB_TIPO_ENER PK">
 <createdBy>rennecastrucci</createdBy>
 <createdTime>2023-05-26 20:23:02 UTC</createdTime>
 <ownerDesignName>DataModeler</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="false"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>02E4C806-C033-4BCB-72E6-45361271FA84</newElementsIDs>
 <usedAttributes>
 <attributeRef>02E4C806-C033-4BCB-72E6-45361271FA84</attributeRef>
 </usedAttributes>

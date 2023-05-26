@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="76732ACC-B086-041D-BD95-71A958893078" containerWithKeyObject="BEE47FAA-8ED0-91DA-9835-97D3E107C50D" localFKIndex="A0639B71-025D-11A6-170B-4D80CDE89B73" name="TB_DESPERDICIO_TB_SETOR_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>916C0742-5940-80F0-67CF-3CFE694D8C63</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<referredTableLongName>TB_SETOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>84615B4D-5122-DD8C-7FF2-3C7E9C9F4AC6</referredTableID>
+<keyObject>15C1DE9A-3D3F-E710-DD7D-B122EF118D7B</keyObject>
+<referredKeyID>15C1DE9A-3D3F-E710-DD7D-B122EF118D7B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_setor</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

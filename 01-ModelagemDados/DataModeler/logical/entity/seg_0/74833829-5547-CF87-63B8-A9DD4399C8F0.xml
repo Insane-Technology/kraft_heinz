@@ -15,6 +15,19 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_agua" id="696BB1B6-8D21-FA33-4566-65AE83D27BFD">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:33:03 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="id_setor" id="3296F130-E4DA-6D90-272C-B127BC1ED1EF">
 <createdBy>rennecastrucci</createdBy>
 <createdTime>2023-05-26 20:18:57 UTC</createdTime>
@@ -30,5 +43,57 @@
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="area_risco" id="AC771621-543B-D97E-BEE2-FC1FE182041E">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:34:04 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_consumo" id="6F297CA6-8A1D-EF6F-DBBF-729D2A274127">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:33:24 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="qtd_consumida" id="B723D1BE-0F8E-C498-1161-B0EBAAB39F47">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:33:34 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="19E0D4EB-F46B-3FD4-80C6-CBEDCE71F404" name="TB_AGUA PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:33:12 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>696BB1B6-8D21-FA33-4566-65AE83D27BFD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

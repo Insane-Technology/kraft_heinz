@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4DECCCC-3C49-B377-F086-B54EE6C202F1" name="TB_PAIS">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>58AA4FD3-1E19-001F-5813-E8A508AFA36F</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_pais" id="DB8B5CB2-BECB-B03B-435C-BE661235691A">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>9E723016-612C-F3E9-821C-9D3A47CF851F</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_pais" id="F914995A-54E1-CAD9-7174-83488B73AB5B">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>3BB030B3-80F6-68A3-1559-2703748D94A6</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_iso_alpha2" id="A9ACD6BF-B5CB-42BA-2F81-5C7BB66F6722">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>AE3BCF41-6DB6-8220-8E2B-D23FB47881CE</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_iso_alpha3" id="D4CB6B55-DF57-5ED0-93F7-E05C8BBD1083">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>61A0A8FF-51CD-9E0E-B5A5-24C546B52D72</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ddi_pais" id="DE9A8EC2-4A09-E1FD-A030-1A6CD111D036">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>486F27E2-E408-3910-5E1D-37CB175B159A</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5FB01251-D679-7796-C8A7-2A6FD06A649E" name="TB_PAIS_PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>26574477-7350-E575-D68D-B6A305A548E1</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB8B5CB2-BECB-B03B-435C-BE661235691A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

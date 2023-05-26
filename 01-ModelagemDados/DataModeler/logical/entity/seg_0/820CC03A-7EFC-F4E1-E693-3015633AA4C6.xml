@@ -58,6 +58,19 @@
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="qtd_kg" id="9D620335-B171-C44C-84F7-66179DD262A1">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:36:15 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="CCCD8013-68D6-0457-1168-BD578FFE2A81" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="B353B6D0-5BF8-DA3B-3AF1-E498918BCD8C" name="TB_DESPERDICIO PK">

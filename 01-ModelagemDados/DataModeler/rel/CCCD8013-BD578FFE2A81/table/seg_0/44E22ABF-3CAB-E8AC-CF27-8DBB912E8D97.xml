@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44E22ABF-3CAB-E8AC-CF27-8DBB912E8D97" name="TB_PRODUTO">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>D3B28AB9-ADC4-AB42-76FA-0F2B45F5F9DD</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_produto" id="23EC6073-AF1E-DA45-0D9C-213D453E2933">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>C9D28A0B-3AC5-D0E3-9187-A9734FEFD0E5</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_produto" id="4F284E7D-4980-F073-D7DE-B0848E662BC0">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>CDD46226-ECFD-0F57-5207-E6BB5697FDD5</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_produto" id="C1B28842-9C6C-1CE5-4BE6-34FF837EB7CF">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>6B0B9A73-A673-5DE9-A7C7-FC606D35EC16</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="96E531DA-4CF7-8AC3-DED3-2E35BD9A9FE0" name="TB_PRODUTO_PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>0599A85A-15FB-5A7F-25E9-746AE0B79FFC</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23EC6073-AF1E-DA45-0D9C-213D453E2933"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

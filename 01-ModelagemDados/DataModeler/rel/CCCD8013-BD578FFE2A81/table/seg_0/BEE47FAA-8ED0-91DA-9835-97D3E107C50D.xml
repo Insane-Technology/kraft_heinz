@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BEE47FAA-8ED0-91DA-9835-97D3E107C50D" name="TB_DESPERDICIO">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>820CC03A-7EFC-F4E1-E693-3015633AA4C6</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_desperdicio" id="F0E01424-2C66-9334-ADBB-F33E324A2E79">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>DE62F30F-DB36-85D0-8460-48A3F619BCEE</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_PRODUTO_id_produto" id="4E860BBE-D085-9F0D-C971-34B6052DDF50">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>46712E0C-351D-5892-30C1-3CA5E5E6BBB3</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A619E735-AC81-C033-57FA-76FE5C8E2BC1" referredColumn="23EC6073-AF1E-DA45-0D9C-213D453E2933"/>
+</associations>
+</Column>
+<Column name="TB_SETOR_id_setor" id="9EF40F32-289B-600B-786E-18D3B0D717CB">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>CBACCEEF-3C1F-F850-905B-7FE5F8321DAD</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="76732ACC-B086-041D-BD95-71A958893078" referredColumn="9057D9AE-1203-74D3-4242-881357037D4A"/>
+</associations>
+</Column>
+<Column name="qtd_kg" id="22AAED3F-A193-92B8-5B3C-E9CB8162CBD8">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>9D620335-B171-C44C-84F7-66179DD262A1</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EB4B52D4-7C06-71AE-3D4C-81179A649B1B" name="TB_DESPERDICIO_PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>B353B6D0-5BF8-DA3B-3AF1-E498918BCD8C</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F0E01424-2C66-9334-ADBB-F33E324A2E79"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0639B71-025D-11A6-170B-4D80CDE89B73" name="TB_DESPERDICIO_TB_SETOR_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>916C0742-5940-80F0-67CF-3CFE694D8C63</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9EF40F32-289B-600B-786E-18D3B0D717CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B08393D-1AFF-9FF6-5640-360BDB6B1BB9" name="TB_DESPERDICIO_TB_PRODUTO_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>AD6B2B5B-6E15-DF83-4791-822EC73E740D</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E860BBE-D085-9F0D-C971-34B6052DDF50"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

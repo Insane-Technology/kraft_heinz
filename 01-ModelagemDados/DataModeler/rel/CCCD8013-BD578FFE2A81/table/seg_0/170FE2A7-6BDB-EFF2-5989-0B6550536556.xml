@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="170FE2A7-6BDB-EFF2-5989-0B6550536556" name="TB_ENERGIA">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>FDBED0D0-7913-BB36-0FCC-489CC6A1DA52</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_energia" id="49700AB9-1610-B9BB-032D-31DF93C297CF">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>4B9A905A-38E5-9161-4B8C-8C4058AE3A9B</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_TIPO_ENER_id_tipo_energia" id="6A296CCD-8D32-7443-3414-9C9A3462BE90">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>D834197D-1693-F67F-90CF-F3D206C152BB</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B718942-FD5F-18CB-B41C-AE90309B14E0" referredColumn="62E4F09C-841D-7840-C2BF-091E89985D03"/>
+</associations>
+</Column>
+<Column name="TB_SETOR_id_setor" id="84150922-CDD9-8231-24AE-4195CA51C0B6">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>36B2E2DB-27BF-522F-BD83-74F7C4E28979</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E341362C-19F4-FE56-347B-42EDD83271F4" referredColumn="9057D9AE-1203-74D3-4242-881357037D4A"/>
+</associations>
+</Column>
+<Column name="dt_consumo" id="58A7A191-A7D8-BEE2-298F-0CDDFF3A6E70">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>DBBF6C1F-08C0-7D38-A2B2-ED1823A2B2E4</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtd_consumida" id="D536629E-064F-FBE2-10C9-7161CDC80CB7">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>C8847197-C80A-3B50-1E09-63F3B7E1D05F</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="676C7571-27E6-D226-B2CE-82D127AA6CF9" name="TB_ENERGIA_PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>ABB96195-D4DE-EA5F-AE5A-CFB10B77BB25</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49700AB9-1610-B9BB-032D-31DF93C297CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="88B387C8-32B9-FC7B-DF9B-65E1564A3C33" name="TB_ENERGIA_TB_SETOR_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>3369B299-0B3E-4CF6-987F-7267C3469696</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84150922-CDD9-8231-24AE-4195CA51C0B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E1C4D2F0-F97D-F7AC-9F62-97709E523D07" name="TB_ENERGIA_TB_TIPO_ENERGIA_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>83AE0EB2-480F-04CD-1D43-22129EAFA9A1</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A296CCD-8D32-7443-3414-9C9A3462BE90"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

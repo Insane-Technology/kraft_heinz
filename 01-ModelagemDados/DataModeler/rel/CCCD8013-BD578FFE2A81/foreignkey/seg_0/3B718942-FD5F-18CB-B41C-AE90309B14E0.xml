@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3B718942-FD5F-18CB-B41C-AE90309B14E0" containerWithKeyObject="170FE2A7-6BDB-EFF2-5989-0B6550536556" localFKIndex="E1C4D2F0-F97D-F7AC-9F62-97709E523D07" name="TB_ENERGIA_TB_TIPO_ENERGIA_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>83AE0EB2-480F-04CD-1D43-22129EAFA9A1</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<referredTableLongName>TB_TIPO_ENERGIA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>89EFFCFA-7F40-6A72-1253-470C52A5099F</referredTableID>
+<keyObject>7E65B8AB-6465-FB90-9B8D-08CBBF7A18B3</keyObject>
+<referredKeyID>7E65B8AB-6465-FB90-9B8D-08CBBF7A18B3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_tipo_energia</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

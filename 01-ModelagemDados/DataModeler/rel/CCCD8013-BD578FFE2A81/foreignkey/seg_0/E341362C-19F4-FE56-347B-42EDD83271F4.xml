@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E341362C-19F4-FE56-347B-42EDD83271F4" containerWithKeyObject="170FE2A7-6BDB-EFF2-5989-0B6550536556" localFKIndex="88B387C8-32B9-FC7B-DF9B-65E1564A3C33" name="TB_ENERGIA_TB_SETOR_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>3369B299-0B3E-4CF6-987F-7267C3469696</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<referredTableLongName>TB_SETOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>84615B4D-5122-DD8C-7FF2-3C7E9C9F4AC6</referredTableID>
+<keyObject>15C1DE9A-3D3F-E710-DD7D-B122EF118D7B</keyObject>
+<referredKeyID>15C1DE9A-3D3F-E710-DD7D-B122EF118D7B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_setor</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

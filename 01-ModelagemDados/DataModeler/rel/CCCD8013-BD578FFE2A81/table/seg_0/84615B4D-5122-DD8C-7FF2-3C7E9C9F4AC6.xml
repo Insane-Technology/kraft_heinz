@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="84615B4D-5122-DD8C-7FF2-3C7E9C9F4AC6" name="TB_SETOR">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>E1E02FAD-2DFF-4920-3069-9D7C95612780</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_setor" id="9057D9AE-1203-74D3-4242-881357037D4A">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>89AEB462-C765-C2F8-7677-E64B501442FB</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_FABRICA_id_fabrica" id="E8EA36F6-31B1-E67A-01CA-22BFC2ADC31C">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>73B6F56A-5EDC-5570-E7B5-29CE7D4B9FAE</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F87FD4DA-99EB-ECBF-EC55-7DAEDA6659BD" referredColumn="4F6D1D0C-56C7-DB9A-5614-6451287ED9BD"/>
+</associations>
+</Column>
+<Column name="nm_setor" id="C3308A23-4E85-42F4-74FD-B0EB35B0FFD6">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>121E8361-646A-B6DB-8584-DC17AFCD8B4B</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="15C1DE9A-3D3F-E710-DD7D-B122EF118D7B" name="TB_SETOR_PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>D67F1518-A46B-3822-BD79-282DFAF4A325</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9057D9AE-1203-74D3-4242-881357037D4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5467449-F6E1-E2DC-0B6D-48F16F090E8D" name="TB_SETOR_TB_FABRICA_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>E4180BC8-849D-41C2-3557-00A7EA5E18F6</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8EA36F6-31B1-E67A-01CA-22BFC2ADC31C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

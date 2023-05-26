@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ACC63869-B3F3-9C84-1FE1-A708A1370E23" name="TB_CIDADE">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>8DCB6120-88ED-F909-51D8-85F3B43898B8</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cidade" id="97A02FB6-4D56-2211-78E2-D2E813952652">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>DF53C2EE-AB02-9513-175D-607955C5D459</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_ESTADO_id_estado" id="35BD8B1D-74B6-721B-E5B0-8B6D789A4805">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>E36AE96C-DB91-C843-F9B9-E517E592C8B1</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="35A3F0D0-817E-F5D4-8B71-38AD1F3BF967" referredColumn="6E4A4AEE-8222-EB45-4709-4732872DA2F1"/>
+</associations>
+</Column>
+<Column name="nm_cidade" id="BCA64E0E-2D41-7B91-799E-DA872846918A">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>5BB0C4C3-7899-231B-2A67-F6AC18371481</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>85</dataTypeSize>
+<ownDataTypeParameters>85,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="52DDE58E-9AD5-BE92-B6AF-8A3593A17ADD" name="TB_CIDADE_PK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>ADB279A0-3F01-1F28-07DF-5103EBEDBA66</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97A02FB6-4D56-2211-78E2-D2E813952652"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="028B02EC-061E-40DF-DCFC-AABEF0CDEF83" name="TB_CIDADE_TB_ESTADO_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>3CF1A34A-CFF5-E443-9A2C-56B3017B755F</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35BD8B1D-74B6-721B-E5B0-8B6D789A4805"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

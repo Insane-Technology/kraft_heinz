@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0D1F7E3F-8A9B-EADB-098D-D9C4CB6AF596" containerWithKeyObject="F1F4D94C-CA4E-8482-E99D-1ED12F512C97" localFKIndex="28B31423-E6D9-91EF-248F-F222BE34B8E5" name="TB_AGUA_TB_SETOR_FK">
+<createdBy>rennecastrucci</createdBy>
+<createdTime>2023-05-26 20:54:30 UTC</createdTime>
+<generatorID>0FBDEB64-6297-A54B-A5C1-D671CF81E980</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<referredTableLongName>TB_SETOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>84615B4D-5122-DD8C-7FF2-3C7E9C9F4AC6</referredTableID>
+<keyObject>15C1DE9A-3D3F-E710-DD7D-B122EF118D7B</keyObject>
+<referredKeyID>15C1DE9A-3D3F-E710-DD7D-B122EF118D7B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_setor</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
