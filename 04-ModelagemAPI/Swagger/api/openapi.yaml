@@ -1,0 +1,1410 @@
+openapi: 3.0.3
+info:
+  title: Modelagem API - Kraft Heinz
+  description: "Solução sistêmica para monitoramento da gestão ambiental da empresa\
+    \ (água, energia e desperdício)."
+  version: 1.0.0
+servers:
+- url: https://insane-technology.com/api/v1
+tags:
+- name: pais
+  description: Lista de países
+- name: estado
+  description: Lista de estados
+- name: cidade
+  description: Lista de cidades
+- name: fabrica
+  description: Lista de fábricas
+- name: setor
+  description: Lista de setores de cada fábrica
+- name: agua
+  description: Consumo de água
+- name: desperdicio
+  description: Controle de desperdício de produtos
+- name: energia
+  description: Gasto de energia
+- name: tipo de energia
+  description: Lista de tipos de energia
+- name: produto
+  description: Lista de produtos
+paths:
+  /pais/{id_pais}:
+    get:
+      tags:
+      - pais
+      summary: Recebe um objeto país
+      description: Recebe um objeto do tipo país.
+      operationId: getPaisById
+      parameters:
+      - name: id_pais
+        in: path
+        description: ID do pais a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pais'
+        "400":
+          description: ID inválido
+        "404":
+          description: País não encontrado
+      x-swagger-router-controller: Pais
+    delete:
+      tags:
+      - pais
+      summary: Deleta um país.
+      description: Deleta um país.
+      operationId: deletePais
+      parameters:
+      - name: id_pais
+        in: path
+        description: ID do pais a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: País não encontrado
+      x-swagger-router-controller: Pais
+  /pais:
+    get:
+      tags:
+      - pais
+      summary: Recebe uma lista de objetos países.
+      description: Recebe uma lista de objetos países.
+      operationId: getAllPaises
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pais'
+                x-content-type: application/json
+      x-swagger-router-controller: Pais
+    put:
+      tags:
+      - pais
+      summary: Atualiza um país.
+      description: Atualiza um país por Id.
+      operationId: updatePais
+      requestBody:
+        description: Atualiza um país.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pais'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pais'
+        "400":
+          description: ID inválido
+        "404":
+          description: País não encontrado
+      x-swagger-router-controller: Pais
+    post:
+      tags:
+      - pais
+      summary: Adiciona um país.
+      description: Adiciona um país.
+      operationId: createPais
+      requestBody:
+        description: Adiciona um novo país.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pais'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pais'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: Pais
+  /estado/{id_estado}:
+    get:
+      tags:
+      - estado
+      summary: Recebe um objeto estado
+      description: Recebe um objeto do tipo estado.
+      operationId: getEstadoById
+      parameters:
+      - name: id_estado
+        in: path
+        description: ID do estado a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Estado'
+        "400":
+          description: ID inválida
+        "404":
+          description: Estado não encontrado
+      x-swagger-router-controller: Estado
+    delete:
+      tags:
+      - estado
+      summary: Deleta um estado.
+      description: Deleta um estado.
+      operationId: deleteEstado
+      parameters:
+      - name: id_estado
+        in: path
+        description: ID do estado a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: Estado não encontrado
+      x-swagger-router-controller: Estado
+  /estado:
+    get:
+      tags:
+      - estado
+      summary: Recebe uma lista de objetos estados.
+      description: Recebe uma lista de objetos estados.
+      operationId: getAllEstados
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Estado'
+                x-content-type: application/json
+      x-swagger-router-controller: Estado
+    put:
+      tags:
+      - estado
+      summary: Atualiza um estado.
+      description: Atualiza um estado por Id.
+      operationId: updateEstado
+      requestBody:
+        description: Atualiza um estado.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Estado'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Estado'
+        "400":
+          description: ID inválido
+        "404":
+          description: Estado não encontrado
+      x-swagger-router-controller: Estado
+    post:
+      tags:
+      - estado
+      summary: Adiciona um estado.
+      description: Adiciona um país.
+      operationId: createEstado
+      requestBody:
+        description: Adiciona um novo estado.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Estado'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Estado'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: Estado
+  /cidade/{id_cidade}:
+    get:
+      tags:
+      - cidade
+      summary: Recebe um objeto cidade
+      description: Recebe um objeto do tipo cidade.
+      operationId: getCidadeById
+      parameters:
+      - name: id_cidade
+        in: path
+        description: ID da cidade a ser requisitada
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cidade'
+        "400":
+          description: ID inválida
+        "404":
+          description: Cidade não encontrada
+      x-swagger-router-controller: Cidade
+    delete:
+      tags:
+      - cidade
+      summary: Deleta uma cidade.
+      description: Deleta uma cidade.
+      operationId: deleteCidade
+      parameters:
+      - name: id_cidade
+        in: path
+        description: ID da cidade a ser requisitada.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: Cidade não encontrada
+      x-swagger-router-controller: Cidade
+  /cidade:
+    get:
+      tags:
+      - cidade
+      summary: Recebe uma lista de objetos cidades.
+      description: Recebe uma lista de objetos cidades.
+      operationId: getAllCidades
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Cidade'
+                x-content-type: application/json
+      x-swagger-router-controller: Cidade
+    put:
+      tags:
+      - cidade
+      summary: Atualiza uma cidade.
+      description: Atualiza uma cidade por Id.
+      operationId: updateCidade
+      requestBody:
+        description: Atualiza uma Cidade.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cidade'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cidade'
+        "400":
+          description: ID inválido
+        "404":
+          description: Cidade não encontrado
+      x-swagger-router-controller: Cidade
+    post:
+      tags:
+      - cidade
+      summary: Adiciona um cidade.
+      description: Adiciona um país.
+      operationId: createCidade
+      requestBody:
+        description: Adiciona uma nova cidade.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cidade'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cidade'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: Cidade
+  /fabrica/{id_fabrica}:
+    get:
+      tags:
+      - fabrica
+      summary: Recebe um objeto fábrica
+      description: Recebe um objeto do tipo fábrica.
+      operationId: getFabricaById
+      parameters:
+      - name: id_fabrica
+        in: path
+        description: ID da fábrica a ser requisitada
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fabrica'
+        "400":
+          description: ID inválida
+        "404":
+          description: Fábrica não encontrada
+      x-swagger-router-controller: Fabrica
+    delete:
+      tags:
+      - fabrica
+      summary: Deleta uma fábrica.
+      description: Deleta uma fábrica.
+      operationId: deleteFabrica
+      parameters:
+      - name: id_fabrica
+        in: path
+        description: ID da fábrica a ser requisitada
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: Fábrica não encontrada
+      x-swagger-router-controller: Fabrica
+  /fabrica:
+    get:
+      tags:
+      - fabrica
+      summary: Recebe uma lista de objetos fabricas.
+      description: Recebe uma lista de objetos fabricas.
+      operationId: getAllFabricas
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Fabrica'
+                x-content-type: application/json
+      x-swagger-router-controller: Fabrica
+    put:
+      tags:
+      - fabrica
+      summary: Atualiza uma fábrica.
+      description: Atualiza uma fábrica por Id.
+      operationId: updateFabrica
+      requestBody:
+        description: Atualiza uma fábrica.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Fabrica'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fabrica'
+        "400":
+          description: ID inválido
+        "404":
+          description: Fábrica não encontrado
+      x-swagger-router-controller: Fabrica
+    post:
+      tags:
+      - fabrica
+      summary: Adiciona uma fábrica.
+      description: Adiciona um país.
+      operationId: createFabrica
+      requestBody:
+        description: Adiciona uma nova fábrica.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Fabrica'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fabrica'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: Fabrica
+  /setor/{id_setor}:
+    get:
+      tags:
+      - setor
+      summary: Recebe um objeto setor
+      description: Recebe um objeto do tipo setor.
+      operationId: getSetorById
+      parameters:
+      - name: id_setor
+        in: path
+        description: ID do setor a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setor'
+        "400":
+          description: ID inválida
+        "404":
+          description: Setor não encontrado
+      x-swagger-router-controller: Setor
+    delete:
+      tags:
+      - setor
+      summary: Deleta um setor.
+      description: Deleta um setor.
+      operationId: deleteSetor
+      parameters:
+      - name: id_setor
+        in: path
+        description: ID do setor a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: Setor não encontrado
+      x-swagger-router-controller: Setor
+  /setor:
+    get:
+      tags:
+      - setor
+      summary: Recebe uma lista de objetos setores.
+      description: Recebe uma lista de objetos setores.
+      operationId: getAllSetores
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Setor'
+                x-content-type: application/json
+      x-swagger-router-controller: Setor
+    put:
+      tags:
+      - setor
+      summary: Atualiza um setor.
+      description: Atualiza um setor por Id.
+      operationId: updateSetor
+      requestBody:
+        description: Atualiza um setor.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Setor'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setor'
+        "400":
+          description: ID inválido
+        "404":
+          description: Setor não encontrado
+      x-swagger-router-controller: Setor
+    post:
+      tags:
+      - setor
+      summary: Adiciona um setor.
+      description: Adiciona um país.
+      operationId: createSetor
+      requestBody:
+        description: Adiciona um novo setor.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Setor'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setor'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: Setor
+  /agua/{id_agua}:
+    get:
+      tags:
+      - agua
+      summary: Recebe um objeto água
+      description: Recebe um objeto do tipo água.
+      operationId: getAguaById
+      parameters:
+      - name: id_agua
+        in: path
+        description: ID do consumo de água a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agua'
+        "400":
+          description: ID inválida
+        "404":
+          description: Consumo da água não encontrado
+      x-swagger-router-controller: Agua
+    delete:
+      tags:
+      - agua
+      summary: Deleta um consumo de água.
+      description: Deleta um consumo de água.
+      operationId: deleteAgua
+      parameters:
+      - name: id_agua
+        in: path
+        description: ID do consumo de água a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: Consumo de água não encontrado
+      x-swagger-router-controller: Agua
+  /agua:
+    get:
+      tags:
+      - agua
+      summary: Recebe uma lista de objetos aguas.
+      description: Recebe uma lista de objetos aguas.
+      operationId: getAllAguas
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Agua'
+                x-content-type: application/json
+      x-swagger-router-controller: Agua
+    put:
+      tags:
+      - agua
+      summary: Atualiza um consumo de água.
+      description: Atualiza um consumo de água por Id.
+      operationId: updateAgua
+      requestBody:
+        description: Atualiza um consumo de água.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agua'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agua'
+        "400":
+          description: ID inválido
+        "404":
+          description: Consumo de água não encontrado
+      x-swagger-router-controller: Agua
+    post:
+      tags:
+      - agua
+      summary: Adiciona uma água.
+      description: Adiciona um país.
+      operationId: createAgua
+      requestBody:
+        description: Adiciona uma nova água.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agua'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agua'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: Agua
+  /desperdicio/{id_desperdicio}:
+    get:
+      tags:
+      - desperdicio
+      summary: Recebe um objeto desperdício
+      description: Recebe um objeto do tipo desperdício.
+      operationId: getDesperdicioById
+      parameters:
+      - name: id_desperdicio
+        in: path
+        description: ID do desperdicio a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Desperdicio'
+        "400":
+          description: ID inválida
+        "404":
+          description: Desperdício não encontrado
+      x-swagger-router-controller: Desperdicio
+    delete:
+      tags:
+      - desperdicio
+      summary: Deleta um desperdicio.
+      description: Deleta um desperdicio.
+      operationId: deleteDesperdicio
+      parameters:
+      - name: id_desperdicio
+        in: path
+        description: ID do desperdicio a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: Desperdicio não encontrado
+      x-swagger-router-controller: Desperdicio
+  /desperdicio:
+    get:
+      tags:
+      - desperdicio
+      summary: Recebe uma lista de objetos desperdicios.
+      description: Recebe uma lista de objetos desperdicios.
+      operationId: getAllDesperdicios
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Desperdicio'
+                x-content-type: application/json
+      x-swagger-router-controller: Desperdicio
+    put:
+      tags:
+      - desperdicio
+      summary: Atualiza um desperdicio.
+      description: Atualiza um desperdicio por Id.
+      operationId: updateDesperdicio
+      requestBody:
+        description: Atualiza um desperdicio.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Desperdicio'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Desperdicio'
+        "400":
+          description: ID inválido
+        "404":
+          description: Desperdicio não encontrado
+      x-swagger-router-controller: Desperdicio
+    post:
+      tags:
+      - desperdicio
+      summary: Adiciona um desperdicio.
+      description: Adiciona um país.
+      operationId: createDesperdicio
+      requestBody:
+        description: Adiciona um novo desperdicio.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Desperdicio'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Desperdicio'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: Desperdicio
+  /energia/{id_energia}:
+    get:
+      tags:
+      - energia
+      summary: Recebe um objeto energia
+      description: Recebe um objeto do tipo energia.
+      operationId: getEnergiaById
+      parameters:
+      - name: id_energia
+        in: path
+        description: ID da energia a ser requisitada
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Energia'
+        "400":
+          description: ID inválida
+        "404":
+          description: Consumo de energia não encontrado
+      x-swagger-router-controller: Energia
+    delete:
+      tags:
+      - energia
+      summary: Deleta um consumo de energia.
+      description: Deleta um consumo de energia.
+      operationId: deleteEnergia
+      parameters:
+      - name: id_energia
+        in: path
+        description: ID do consumo de energia a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: Consumo de energia não encontrado
+      x-swagger-router-controller: Energia
+  /energia:
+    get:
+      tags:
+      - energia
+      summary: Recebe uma lista de objetos energias.
+      description: Recebe uma lista de objetos energias.
+      operationId: getAllEnergias
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Energia'
+                x-content-type: application/json
+      x-swagger-router-controller: Energia
+    put:
+      tags:
+      - energia
+      summary: Atualiza um consumo de energia.
+      description: Atualiza um consumo de energia por Id.
+      operationId: updateEnergia
+      requestBody:
+        description: Atualiza um consumo de energia.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Energia'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Energia'
+        "400":
+          description: ID inválido
+        "404":
+          description: Energia não encontrado
+      x-swagger-router-controller: Energia
+    post:
+      tags:
+      - energia
+      summary: Adiciona um consumo de energia.
+      description: Adiciona um país.
+      operationId: createEnergia
+      requestBody:
+        description: Adiciona um novo consumo de energia.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Energia'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Energia'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: Energia
+  /tipo_energia/{id_tipo_energia}:
+    get:
+      tags:
+      - tipo de energia
+      summary: Recebe um objeto tipo energia
+      description: Recebe um objeto do tipo de energia.
+      operationId: getTipoEnergiaById
+      parameters:
+      - name: id_tipo_energia
+        in: path
+        description: ID do tipo de energia a ser requisitada
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TipoEnergia'
+        "400":
+          description: ID inválida
+        "404":
+          description: Tipo de energia não encontrado
+      x-swagger-router-controller: TipoEnergia
+    delete:
+      tags:
+      - tipo de energia
+      summary: Deleta um tipo de energia.
+      description: Deleta um tipo de energia.
+      operationId: deleteTipoEnergia
+      parameters:
+      - name: id_tipo_energia
+        in: path
+        description: ID do tipo de energia a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: Tipo de energia não encontrado
+      x-swagger-router-controller: TipoEnergia
+  /tipo_energia:
+    get:
+      tags:
+      - tipo de energia
+      summary: Recebe uma lista de objetos de tipos de energia.
+      description: Recebe uma lista de objetos energias.
+      operationId: getAllTiposEnergias
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TipoEnergia'
+                x-content-type: application/json
+      x-swagger-router-controller: TipoEnergia
+    put:
+      tags:
+      - tipo de energia
+      summary: Atualiza um tipo de energia.
+      description: Atualiza um tipo de energia por Id.
+      operationId: updateTipoEnergia
+      requestBody:
+        description: Atualiza um tipo de energia.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TipoEnergia'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TipoEnergia'
+        "400":
+          description: ID inválido
+        "404":
+          description: Tipo de energia não encontrado
+      x-swagger-router-controller: TipoEnergia
+    post:
+      tags:
+      - tipo de energia
+      summary: Adiciona um tipo de energia.
+      description: Adiciona um país.
+      operationId: createTipoEnergia
+      requestBody:
+        description: Adiciona um novo tipo de energia.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TipoEnergia'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TipoEnergia'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: TipoEnergia
+  /produto/{id_produto}:
+    get:
+      tags:
+      - produto
+      summary: Recebe um objeto produto
+      description: Recebe um objeto do tipo produto.
+      operationId: getProdutoById
+      parameters:
+      - name: id_produto
+        in: path
+        description: ID do produto a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Produto'
+        "400":
+          description: ID inválida
+        "404":
+          description: Produto não encontrado
+      x-swagger-router-controller: Produto
+    delete:
+      tags:
+      - produto
+      summary: Deleta um produto.
+      description: Deleta um produto.
+      operationId: deleteProduto
+      parameters:
+      - name: id_produto
+        in: path
+        description: ID do produto a ser requisitado
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "400":
+          description: ID inválido
+        "404":
+          description: Produto não encontrado
+      x-swagger-router-controller: Produto
+  /produto:
+    get:
+      tags:
+      - produto
+      summary: Recebe uma lista de objetos produtos.
+      description: Recebe uma lista de objetos produtos.
+      operationId: getAllProdutos
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Produto'
+                x-content-type: application/json
+      x-swagger-router-controller: Produto
+    put:
+      tags:
+      - produto
+      summary: Atualiza um produto.
+      description: Atualiza um produto por Id.
+      operationId: updateProduto
+      requestBody:
+        description: Atualiza um produto.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Produto'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Produto'
+        "400":
+          description: ID inválido
+        "404":
+          description: Produto não encontrado
+      x-swagger-router-controller: Produto
+    post:
+      tags:
+      - produto
+      summary: Adiciona um produto.
+      description: Adiciona um país.
+      operationId: createProduto
+      requestBody:
+        description: Adiciona um novo produto.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Produto'
+        required: true
+      responses:
+        "200":
+          description: operação realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Produto'
+        "405":
+          description: input inválido
+      x-swagger-router-controller: Produto
+components:
+  schemas:
+    Pais:
+      type: object
+      properties:
+        id_pais:
+          type: integer
+          format: int32
+          example: 10
+        nm_pais:
+          type: string
+          example: Brasil
+        ds_iso_alpha2:
+          type: string
+          example: BR
+        ds_iso_alpha3:
+          type: string
+          example: BRA
+        ddi_pais:
+          type: string
+          example: "55"
+      example:
+        id_pais: 10
+        nm_pais: Brasil
+        ds_iso_alpha2: BR
+        ds_iso_alpha3: BRA
+        ddi_pais: "55"
+    Estado:
+      type: object
+      properties:
+        id_estado:
+          type: integer
+          format: int32
+          example: 10
+        nm_estado:
+          type: string
+          example: São Paulo
+        ds_abreviacao:
+          type: string
+          example: SP
+        fk_id_pais:
+          type: integer
+          format: int32
+          example: 10
+      example:
+        id_estado: 10
+        fk_id_pais: 10
+        nm_estado: São Paulo
+        ds_abreviacao: SP
+    Cidade:
+      type: object
+      properties:
+        id_cidade:
+          type: integer
+          format: int32
+          example: 10
+        nm_cidade:
+          type: string
+          example: São Paulo
+        fk_id_estado:
+          type: integer
+          format: int32
+          example: 10
+      example:
+        id_cidade: 10
+        fk_id_estado: 10
+        nm_cidade: São Paulo
+    Fabrica:
+      type: object
+      properties:
+        id_fabrica:
+          type: integer
+          format: int32
+          example: 10
+        nm_fabrica:
+          type: string
+          example: Heinz São Paulo
+        ds_registro:
+          type: string
+          example: "985642137852"
+        fk_id_cidade:
+          type: integer
+          format: int32
+          example: 10
+      example:
+        id_fabrica: 10
+        fk_id_cidade: 10
+        nm_fabrica: Heinz São Paulo
+        ds_registro: "FH985642137852SP"
+    Setor:
+      type: object
+      properties:
+        id_setor:
+          type: integer
+          format: int32
+          example: 10
+        nm_setor:
+          type: string
+          example: Logística
+        fk_id_fabrica:
+          type: integer
+          format: int32
+          example: 10
+      example:
+        id_setor: 10
+        fk_id_fabrica: 10
+        nm_setor: Logística
+    Agua:
+      type: object
+      properties:
+        id_agua:
+          type: integer
+          format: int32
+          example: 1
+        id_setor:
+          type: integer
+          format: int32
+          example: 10
+        qtd_consumida:
+          type: integer
+          format: int32
+          example: 200
+        dt_consumo:
+          type: string
+          format: date-time
+        area_risco:
+          type: boolean
+          example: true
+      example:
+        id_agua: 1
+        id_setor: 10
+        dt_consumo: 2000-01-23T04:56:07.000+00:00
+        qtd_consumida: 200
+        area_risco: true
+    Desperdicio:
+      type: object
+      properties:
+        id_desperdicio:
+          type: integer
+          format: int32
+          example: 10
+        qtd_kg:
+          type: integer
+          format: int32
+          example: 200
+        fk_id_produto:
+          type: integer
+          format: int32
+          example: 10
+        fk_id_setor:
+          type: integer
+          format: int32
+          example: 10
+      example:
+        id_desperdicio: 10
+        fk_id_produto: 10
+        fk_id_setor: 10
+        qtd_kg: 200
+    Energia:
+      type: object
+      properties:
+        id_energia:
+          type: integer
+          format: int32
+          example: 10
+        qtd_consumida:
+          type: integer
+          format: int32
+          example: 200
+        dt_consumo:
+          type: string
+          format: date-time
+        fk_id_tipo_energia:
+          type: integer
+          format: int32
+          example: 10
+        fk_id_setor:
+          type: integer
+          format: int32
+          example: 10
+      example:
+        id_energia: 10
+        fk_id_tipo_energia: 10
+        fk_id_setor: 10
+        dt_consumo: 2000-01-23T04:56:07.000+00:00
+        qtd_consumida: 200
+    TipoEnergia:
+      type: object
+      properties:
+        id_tipo_energia:
+          type: integer
+          format: int32
+          example: 10
+        nm_tipo_energia:
+          type: string
+          example: Eólica
+        renovavel:
+          type: boolean
+          example: true
+      example:
+        id_tipo_energia: 10
+        nm_tipo_energia: Eólica
+        renovavel: true
+    Produto:
+      type: object
+      properties:
+        id_produto:
+          type: integer
+          format: int32
+          example: 10
+        cd_produto:
+          type: string
+          example: MLT1056
+        nm_produto:
+          type: string
+          example: Tomate
+      example:
+        id_produto: 10
+        nm_produto: Ketchup
+        cd_produto: KT1056
