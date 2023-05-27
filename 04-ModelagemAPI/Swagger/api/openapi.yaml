@@ -57,6 +57,8 @@ paths:
         "404":
           description: País não encontrado
       x-swagger-router-controller: Pais
+      security:
+        - api_key: []
     delete:
       tags:
       - pais
@@ -78,6 +80,8 @@ paths:
         "404":
           description: País não encontrado
       x-swagger-router-controller: Pais
+      security:
+        - api_key: []
   /pais:
     get:
       tags:
@@ -96,6 +100,8 @@ paths:
                   $ref: '#/components/schemas/Pais'
                 x-content-type: application/json
       x-swagger-router-controller: Pais
+      security:
+        - api_key: []
     put:
       tags:
       - pais
@@ -121,6 +127,8 @@ paths:
         "404":
           description: País não encontrado
       x-swagger-router-controller: Pais
+      security:
+        - api_key: []
     post:
       tags:
       - pais
@@ -144,6 +152,8 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: Pais
+      security:
+        - api_key: []
   /estado/{id_estado}:
     get:
       tags:
@@ -173,6 +183,8 @@ paths:
         "404":
           description: Estado não encontrado
       x-swagger-router-controller: Estado
+      security:
+        - api_key: []
     delete:
       tags:
       - estado
@@ -194,6 +206,8 @@ paths:
         "404":
           description: Estado não encontrado
       x-swagger-router-controller: Estado
+      security:
+        - api_key: []
   /estado:
     get:
       tags:
@@ -212,6 +226,8 @@ paths:
                   $ref: '#/components/schemas/Estado'
                 x-content-type: application/json
       x-swagger-router-controller: Estado
+      security:
+        - api_key: []
     put:
       tags:
       - estado
@@ -237,6 +253,8 @@ paths:
         "404":
           description: Estado não encontrado
       x-swagger-router-controller: Estado
+      security:
+        - api_key: []
     post:
       tags:
       - estado
@@ -260,6 +278,8 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: Estado
+      security:
+        - api_key: []
   /cidade/{id_cidade}:
     get:
       tags:
@@ -289,6 +309,8 @@ paths:
         "404":
           description: Cidade não encontrada
       x-swagger-router-controller: Cidade
+      security:
+        - api_key: []
     delete:
       tags:
       - cidade
@@ -310,6 +332,8 @@ paths:
         "404":
           description: Cidade não encontrada
       x-swagger-router-controller: Cidade
+      security:
+        - api_key: []
   /cidade:
     get:
       tags:
@@ -328,6 +352,8 @@ paths:
                   $ref: '#/components/schemas/Cidade'
                 x-content-type: application/json
       x-swagger-router-controller: Cidade
+      security:
+        - api_key: []
     put:
       tags:
       - cidade
@@ -353,6 +379,8 @@ paths:
         "404":
           description: Cidade não encontrado
       x-swagger-router-controller: Cidade
+      security:
+        - api_key: []
     post:
       tags:
       - cidade
@@ -376,6 +404,8 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: Cidade
+      security:
+        - api_key: []
   /fabrica/{id_fabrica}:
     get:
       tags:
@@ -405,6 +435,11 @@ paths:
         "404":
           description: Fábrica não encontrada
       x-swagger-router-controller: Fabrica
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     delete:
       tags:
       - fabrica
@@ -426,6 +461,11 @@ paths:
         "404":
           description: Fábrica não encontrada
       x-swagger-router-controller: Fabrica
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /fabrica:
     get:
       tags:
@@ -444,6 +484,11 @@ paths:
                   $ref: '#/components/schemas/Fabrica'
                 x-content-type: application/json
       x-swagger-router-controller: Fabrica
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     put:
       tags:
       - fabrica
@@ -469,6 +514,11 @@ paths:
         "404":
           description: Fábrica não encontrado
       x-swagger-router-controller: Fabrica
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     post:
       tags:
       - fabrica
@@ -492,6 +542,11 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: Fabrica
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /setor/{id_setor}:
     get:
       tags:
@@ -521,6 +576,11 @@ paths:
         "404":
           description: Setor não encontrado
       x-swagger-router-controller: Setor
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     delete:
       tags:
       - setor
@@ -542,6 +602,11 @@ paths:
         "404":
           description: Setor não encontrado
       x-swagger-router-controller: Setor
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /setor:
     get:
       tags:
@@ -560,6 +625,11 @@ paths:
                   $ref: '#/components/schemas/Setor'
                 x-content-type: application/json
       x-swagger-router-controller: Setor
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     put:
       tags:
       - setor
@@ -585,6 +655,11 @@ paths:
         "404":
           description: Setor não encontrado
       x-swagger-router-controller: Setor
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     post:
       tags:
       - setor
@@ -608,6 +683,11 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: Setor
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /agua/{id_agua}:
     get:
       tags:
@@ -637,6 +717,11 @@ paths:
         "404":
           description: Consumo da água não encontrado
       x-swagger-router-controller: Agua
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     delete:
       tags:
       - agua
@@ -658,6 +743,11 @@ paths:
         "404":
           description: Consumo de água não encontrado
       x-swagger-router-controller: Agua
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /agua:
     get:
       tags:
@@ -676,6 +766,11 @@ paths:
                   $ref: '#/components/schemas/Agua'
                 x-content-type: application/json
       x-swagger-router-controller: Agua
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     put:
       tags:
       - agua
@@ -701,6 +796,11 @@ paths:
         "404":
           description: Consumo de água não encontrado
       x-swagger-router-controller: Agua
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     post:
       tags:
       - agua
@@ -724,6 +824,11 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: Agua
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /desperdicio/{id_desperdicio}:
     get:
       tags:
@@ -753,6 +858,11 @@ paths:
         "404":
           description: Desperdício não encontrado
       x-swagger-router-controller: Desperdicio
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     delete:
       tags:
       - desperdicio
@@ -774,6 +884,11 @@ paths:
         "404":
           description: Desperdicio não encontrado
       x-swagger-router-controller: Desperdicio
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /desperdicio:
     get:
       tags:
@@ -792,6 +907,11 @@ paths:
                   $ref: '#/components/schemas/Desperdicio'
                 x-content-type: application/json
       x-swagger-router-controller: Desperdicio
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     put:
       tags:
       - desperdicio
@@ -817,6 +937,11 @@ paths:
         "404":
           description: Desperdicio não encontrado
       x-swagger-router-controller: Desperdicio
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     post:
       tags:
       - desperdicio
@@ -840,6 +965,11 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: Desperdicio
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /energia/{id_energia}:
     get:
       tags:
@@ -869,6 +999,11 @@ paths:
         "404":
           description: Consumo de energia não encontrado
       x-swagger-router-controller: Energia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     delete:
       tags:
       - energia
@@ -890,6 +1025,11 @@ paths:
         "404":
           description: Consumo de energia não encontrado
       x-swagger-router-controller: Energia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /energia:
     get:
       tags:
@@ -908,6 +1048,11 @@ paths:
                   $ref: '#/components/schemas/Energia'
                 x-content-type: application/json
       x-swagger-router-controller: Energia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     put:
       tags:
       - energia
@@ -933,6 +1078,11 @@ paths:
         "404":
           description: Energia não encontrado
       x-swagger-router-controller: Energia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     post:
       tags:
       - energia
@@ -956,6 +1106,11 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: Energia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /tipo_energia/{id_tipo_energia}:
     get:
       tags:
@@ -985,6 +1140,11 @@ paths:
         "404":
           description: Tipo de energia não encontrado
       x-swagger-router-controller: TipoEnergia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     delete:
       tags:
       - tipo de energia
@@ -1006,6 +1166,11 @@ paths:
         "404":
           description: Tipo de energia não encontrado
       x-swagger-router-controller: TipoEnergia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /tipo_energia:
     get:
       tags:
@@ -1024,6 +1189,11 @@ paths:
                   $ref: '#/components/schemas/TipoEnergia'
                 x-content-type: application/json
       x-swagger-router-controller: TipoEnergia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     put:
       tags:
       - tipo de energia
@@ -1049,6 +1219,11 @@ paths:
         "404":
           description: Tipo de energia não encontrado
       x-swagger-router-controller: TipoEnergia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     post:
       tags:
       - tipo de energia
@@ -1072,6 +1247,11 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: TipoEnergia
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /produto/{id_produto}:
     get:
       tags:
@@ -1101,6 +1281,11 @@ paths:
         "404":
           description: Produto não encontrado
       x-swagger-router-controller: Produto
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     delete:
       tags:
       - produto
@@ -1122,6 +1307,11 @@ paths:
         "404":
           description: Produto não encontrado
       x-swagger-router-controller: Produto
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
   /produto:
     get:
       tags:
@@ -1140,6 +1330,11 @@ paths:
                   $ref: '#/components/schemas/Produto'
                 x-content-type: application/json
       x-swagger-router-controller: Produto
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     put:
       tags:
       - produto
@@ -1165,6 +1360,11 @@ paths:
         "404":
           description: Produto não encontrado
       x-swagger-router-controller: Produto
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
     post:
       tags:
       - produto
@@ -1188,6 +1388,11 @@ paths:
         "405":
           description: input inválido
       x-swagger-router-controller: Produto
+      security:
+        - api_key: []
+        - dashboard_auth:
+            - write:data
+            - read:data
 components:
   schemas:
     Pais:
@@ -1408,3 +1613,16 @@ components:
         id_produto: 10
         nm_produto: Ketchup
         cd_produto: KT1056
+  securitySchemes:
+    dashboard_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://insane-technology.com/api/v1/oauth/authorize
+          scopes:
+            write:data: Insere e altera dados no sistema
+            read:data: Lê dados do sistema
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
