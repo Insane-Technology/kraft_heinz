@@ -5,7 +5,7 @@ info:
     \ (água, energia e desperdício)."
   version: 1.0.0
 servers:
-- url: https://insane-technology.com/api/v1
+- url: https://api-kraftheinz.42g.com.br/api/v1
 tags:
 - name: pais
   description: Lista de países
