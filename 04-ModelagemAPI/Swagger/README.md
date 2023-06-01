@@ -13,7 +13,7 @@ Apos a instalacao, rode o servidor com o comando:
 npm start
 ```
 
-Para acessar a interface Swagger, acesse:
+Para acessar a interface Swagger, entre em:
 
 ```
 http://localhost:8080/docs
