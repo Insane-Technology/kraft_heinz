@@ -1,6 +1,6 @@
 # Swagger generated server
 
-### Rodando o servidor localmente
+### Rodando o servidor localmente:
 ```
 # Clone o repositorio
 git clone https://github.com/Insane-Technology/kraft_heinz
