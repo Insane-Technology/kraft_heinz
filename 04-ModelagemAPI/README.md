@@ -20,7 +20,7 @@ Apos seguidos os passos acima, o servidor podera ser acessado pela url:
 http://localhost:8080/
 ```
 
-## Para a documentacao online, acesse:
+### Para a documentacao online, acesse:
 ```
 https://api-kraftheinz.42g.com.br/docs/
 ```
