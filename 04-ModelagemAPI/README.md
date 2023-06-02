@@ -9,7 +9,7 @@
     cd ./kraft_heinz/04-ModelagemAPI/Swagger
 
 # Instale as dependências necessarias
-    npm prestart
+    npm install
 
 # Rode o servidor
     npm start
