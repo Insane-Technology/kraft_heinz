@@ -6,10 +6,10 @@ Desenvolver requisitos de uma solução sistêmica para monitoramento da gestão
 ### Assista o vídeo do Pitch em nossa página Web <https://kraftheinz.42g.com.br>
 
 # Protótipo
-### Acesse o link <https://prototype-kraftheinz.42g.com.br>
+### Acesse o link <https://kraftheinz.42g.com.br/prototype>
 
 # Modelagem da API
-### Documentação API <https://api-kraftheinz.42g.com.br/docs>
+### Documentação API <https://api.kraftheinz.42g.com.br/docs>
 
 # Modelagem dos Dados
 ![modelo_logico](https://github.com/Insane-Technology/kraft_heinz/blob/main/01-ModelagemDados/ModeloLogico.png#gh-dark-mode-only)
